@@ -16,6 +16,8 @@ const client = new Client({
     headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   },
+  takeoverOnConflict: true, // Auto-reconnect jika ada konflik
+  restartOnAuthFail: true, // Auto-restart jika auth gagal
 });
 
 let isClientReady = false;
